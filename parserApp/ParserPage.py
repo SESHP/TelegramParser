@@ -63,4 +63,14 @@ driver.quit()
 
 soup = BeautifulSoup(html, 'html.parser')
 
-print(soup.prettify())
+
+generalInfo = soup.find('div', 'm-t-10 details-content').text
+generalInformation = generalInfo.split()
+infoIE = ' '.join(generalInformation[0:4])
+infoTIN = ' '.join(generalInformation[4:6])
+infoOGRN = ' '.join(generalInformation[6:8])
+infoReg = ' '.join(generalInformation[8:14])
+infoStatus = ' '.join(generalInformation[14:16])
+infoOND = ' '.join(generalInformation[16:28])
+
+print('\n', infoIE,'\n', infoTIN,'\n', infoOGRN,'\n', infoReg,'\n', infoStatus,'\n', infoOND)
