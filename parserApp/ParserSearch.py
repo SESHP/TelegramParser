@@ -70,9 +70,3 @@ class ParserSearching:
         return self.parse_html(html)
 
 
-# Пример использования
-if __name__ == '__main__':
-    parser = ParserSearching('/Users/buzeoff/Downloads/chromedriver-mac-arm64/chromedriver')
-    input_names = input("Введите имена для поиска: ")
-    results = parser.run(input_names)
-    print(results)
